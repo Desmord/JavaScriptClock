@@ -1,3 +1,14 @@
 import css from "./mainCss.css";
 
- console.log(`Witam afs`);
+
+const Clock = require(`./clockJs/clock`);
+
+const clock = new Clock.Clock(document.querySelector(`.clock`));
+
+clock.showData()
+
+// ------------------------------
+// ------------------------------
+// ------------------------------
+
+// console.log(document.querySelector(`.clock`).childNodes[19]);
