@@ -18,10 +18,15 @@ body {
     align-items: center;
 }
 
+/*  min width and height 100px */
+
 .clock {
     position: relative;
     width: 600px;
+    min-width: 100px;
     height: 600px;
+    min-height: 100px;
+    background-color: #fff;
 }
 
 .clockLine {
@@ -31,69 +36,113 @@ body {
 }
 
 .clock__firstLine {
-    left: 200px;
-    /* left: 33%; */
-    top: -15px;
-    /* width: 83%; */
-    width: 500px;
-    height: 2px;
+    left: 33%;
+    top: -2.5%;
+    width: 84%;
+    height: .3%;
 }
 
 .clock__secondLine {
-    left: 250px;
-    top: -25px;
-    width: 400px;
     height: 2px;
+    left: 42%;
+    top: -4%;
+    width: 67%;
+    height: .3%;
 }
 
 .clock__thirdLine {
-    left: 610px;
-    top: -80px;
-    width: 2px;
-    height: 400px;
+    left: 101.6%;
+    top: -13.5%;
+    width: .4%;
+    height: 66%;
 }
 
 .clock__fourthLine {
-    width: 200px;
-    height: 2px;
-    top: 620px;
-    left: -40px;
+    width: 33.5%;
+    height: .3%;
+    top: 103.3%;
+    left: -6.6%;
 }
 
 .clock__fifthLine {
-    width: 300px;
-    height: 2px;
-    top: 630px;
-    left: -60px;
+    width: 50%;
+    height: .3%;
+    top: 105%;
+    left: -10%;
 }
 
 .clock__sixthLine {
-    width: 100px;
-    height: 2px;
-    top: 610px;
-    left: -10px;
+    width: 17%;
+    height: .3%;
+    top: 101.5%;
+    left: -1.5%;
 }
 
 .clock__seventhLine {
-    width: 2px;
-    height: 100px;
-    top: 511px;
-    left: -10px;
+    width: .3%;
+    height: 16.6%;
+    top: 85.3%;
+    left: -1.5%;
 }
 
 .clock__eighthLine {
-    width: 2px;
-    height: 300px;
-    top: 380px;
-    left: -20px;
+    width: .3%;
+    height: 50%;
+    top: 63.5%;
+    left: -3.3%;
 }
 
 .clock__centerPoint {
     position: absolute;
-    left: 297px;
-    top: 297px;
-    width: 6px;
-    height: 6px;
+    left: 49%;
+    top: 49%;
+    width: 2%;
+    height: 2%;
     border-radius: 50%;
     background-color: var(--color-four);
+}
+
+/* ----------------------------------------------------------- */
+
+/* ----------------------------------------------------------- */
+
+/* ----------------------------------------------------------- */
+
+/* ----------------------------------------------------------- */
+
+.clock__hourPointer {
+    position: absolute;
+    left: 49.4%;
+    top: 7%;
+    width: 1.2%;
+    height: 36%;
+    background-color: var(--color-three);
+    border-radius: 40%;
+    opacity: 0.9;
+    /* ----------------- */
+    /* display: none; */
+}
+
+.clock__minutePointer {
+    position: absolute;
+    left: 49.75%;
+    top: 2%;
+    width: .8%;
+    height: 46%;
+    background-color: var(--color-four);
+    border-radius: 30%;
+    opacity: 0.9;
+    /* display: none; */
+}
+
+.clock__secondsPointer {
+    position: absolute;
+    left: 49.75%;
+    top: 17%;
+    width: .8%;
+    height: 26%;
+    background-color: var(--color-one);
+    border-radius: 30%;
+    opacity: 0.8;
+    /* display: none; */
 }
