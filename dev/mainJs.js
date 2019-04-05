@@ -7,6 +7,7 @@ const clock = new Clock.Clock(document.querySelector(`.clock`));
 
 clock.showData()
 clock.updateHourPointerPosition();
+clock.updateMinutePointerPosition();
 
 // ------------------------------
 // ------------------------------

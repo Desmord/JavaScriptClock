@@ -54,49 +54,46 @@ class Clock {
 
         this.hourPointer.style.transform = `rotate(${hourTransformationDegrees}deg)`;
 
-        console.log(hourTransformationDegrees);
-
         let cx = this.clockWidth / 2;
         let cy = this.clockHeight / 2;
 
-        console.log(cx);
-        console.log(cy);
-
         let r = this.clockWidth / 2 - (this.clockWidth * 0.07);
-
-
-        console.log();
-        console.log(r);
 
         let x = r * Math.cos((hourTransformationDegrees - 90) * Math.PI / 180) + 300;
         let y = r * Math.sin((hourTransformationDegrees - 90) * Math.PI / 180) + 300;
 
-        console.log();
-        console.log(x);
-        console.log(y);
 
-        console.log(this.hourPointer.clientHeight);
-
-        this.hourPointer.style.left = `${x}px`;
+        this.hourPointer.style.left = `${x + this.hourPointer.clientWidth}px`;
         this.hourPointer.style.top = `${y}px`;
 
+    }
 
-        // 75
-        // 527
+    updateMinutePointerPosition() {
+
+        let minuteTransformationDegrees = 0;
+
+        let deg = this.actualMinutes * 6;
+
+        this.minutePointer.style.transform = `rotate(${deg}deg)`;
+
+
+        let cx = this.clockWidth / 2;
+        let cy = this.clockHeight / 2;
+
+        let r = this.clockWidth / 2 - (this.clockWidth * 0.02);
+
+        let x = r * Math.cos((deg - 90) * Math.PI / 180) + 300;
+        let y = r * Math.sin((deg - 90) * Math.PI / 180) + 300;
+
+
+        this.minutePointer.style.left = `${x + this.minutePointer.clientWidth}px`;
+        this.minutePointer.style.top = `${y}px`;
+
     }
 
 
     showData() {
-        // console.log(this.clock);
-        // console.log(this.hourPointer);
-        // console.log(this.minutePointer);
-        // console.log(this.secondsPointer);
-        // console.log(this.clockWidth);
-        // console.log(this.clockHeight);
-        // console.log(this.actualTime);
-        // console.log(this.actualHour);
-        // console.log(this.actualMinutes);
-        // console.log(this.actualSeconds);
+
     }
 }
 
