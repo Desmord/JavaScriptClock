@@ -52,31 +52,37 @@ class Clock {
             hourTransformationDegrees = deg + mdeg;
         }
 
-        console.log(hourTransformationDegrees);
-
         this.hourPointer.style.transform = `rotate(${hourTransformationDegrees}deg)`;
 
-        //  tutaj obiliczyc p[ołozenie]
-        // / x = cx + r * cos(a);
-        // y = cy + * sin (a);
+        console.log(hourTransformationDegrees);
 
-        let orginx = this.hourPointer.offsetLeft;
-        let orginy = this.hourPointer.offsetTop;
-        let r = (this.clockHeight / 2) - (((this.clockHeight / 2) * 0.07));
+        let cx = this.clockWidth / 2;
+        let cy = this.clockHeight / 2;
 
-        let x = orginx + r * Math.cos(hourTransformationDegrees);
-        let y = orginy + r * Math.sin(hourTransformationDegrees);
+        console.log(cx);
+        console.log(cy);
+
+        let r = this.clockWidth / 2 - (this.clockWidth * 0.07);
+
+
+        console.log();
+        console.log(r);
+
+        let x = r * Math.cos((hourTransformationDegrees - 90) * Math.PI / 180) + 300;
+        let y = r * Math.sin((hourTransformationDegrees - 90) * Math.PI / 180) + 300;
+
+        console.log();
         console.log(x);
         console.log(y);
 
-        // console.log(this.hourPointer.style);
-        this.hourPointer.style.top = `${y}px`;
+        console.log(this.hourPointer.clientHeight);
+
         this.hourPointer.style.left = `${x}px`;
+        this.hourPointer.style.top = `${y}px`;
 
-        // console.log(this.hourPointer);//offset left top
 
-        //Naprawic połąznie i jego oblicznia na okregu
-        //  ZMienic rotate zeby bylo dobrz obraca sie nakalo swoich wspolzednych anie nie w srodkowym punkcie
+        // 75
+        // 527
     }
 
 
