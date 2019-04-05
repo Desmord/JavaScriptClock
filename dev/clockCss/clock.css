@@ -13,9 +13,9 @@
     --color-five: rgba(75, 71, 66, 1);
     /* ---------- */
     position: relative;
-    width: 600px;
+    width: 300px;
     min-width: 100px;
-    height: 600px;
+    height: 300px;
     min-height: 100px;
     background-color: var(--color-one-transparent);
     border-radius: 10%;
@@ -112,6 +112,7 @@
     border-radius: 40%;
     opacity: 0.9;
     transform-origin: top left;
+    transition: all 10s ease-in-out;
     /* ----------------- */
     /* display: none; */
 }
@@ -127,6 +128,7 @@
     border-radius: 30%;
     opacity: 0.9;
     transform-origin: top left;
+    transition: all 5s ease-in-out;
     /* display: none; */
 }
 
@@ -140,5 +142,6 @@
     border-radius: 30%;
     opacity: 0.8;
     transform-origin: top left;
+    transition: all 1s linear;
     /* display: none; */
 }

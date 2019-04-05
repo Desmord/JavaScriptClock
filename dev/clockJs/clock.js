@@ -59,8 +59,8 @@ class Clock {
 
         let r = this.clockWidth / 2 - (this.clockWidth * 0.07);
 
-        let x = r * Math.cos((hourTransformationDegrees - 90) * Math.PI / 180) + 300;
-        let y = r * Math.sin((hourTransformationDegrees - 90) * Math.PI / 180) + 300;
+        let x = r * Math.cos((hourTransformationDegrees - 90) * Math.PI / 180) + this.clockWidth/2;
+        let y = r * Math.sin((hourTransformationDegrees - 90) * Math.PI / 180) + this.clockWidth/2;
 
 
         this.hourPointer.style.left = `${x + this.hourPointer.clientWidth}px`;
@@ -82,12 +82,35 @@ class Clock {
 
         let r = this.clockWidth / 2 - (this.clockWidth * 0.02);
 
-        let x = r * Math.cos((deg - 90) * Math.PI / 180) + 300;
-        let y = r * Math.sin((deg - 90) * Math.PI / 180) + 300;
+        let x = r * Math.cos((deg - 90) * Math.PI / 180) + this.clockWidth/2;
+        let y = r * Math.sin((deg - 90) * Math.PI / 180) + this.clockWidth/2;
 
 
-        this.minutePointer.style.left = `${x + this.minutePointer.clientWidth}px`;
+        this.minutePointer.style.left = `${x }px`;
         this.minutePointer.style.top = `${y}px`;
+
+    }
+
+    updateSecondPointerPosition() {
+
+        let secondTransformationDegrees = 0;
+
+        let deg = this.actualSeconds * 6;
+
+        this.secondsPointer.style.transform = `rotate(${deg}deg)`;
+
+
+        let cx = this.clockWidth / 2;
+        let cy = this.clockHeight / 2;
+
+        let r = this.clockWidth / 2 - (this.clockWidth * 0.17);
+
+        let x = r * Math.cos((deg - 90) * Math.PI / 180) + this.clockWidth/2;
+        let y = r * Math.sin((deg - 90) * Math.PI / 180) + this.clockWidth/2;
+
+
+        this.secondsPointer.style.left = `${x + this.secondsPointer.clientWidth}px`;
+        this.secondsPointer.style.top = `${y}px`;
 
     }
 
@@ -96,12 +119,6 @@ class Clock {
 
     }
 }
-
-// one hour = 30deg;
-// one minute = 6 deg
-// one secont = 6 deg
-
-
 
 
 
