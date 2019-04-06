@@ -124,14 +124,13 @@
     top: 2%;
     width: .8%;
     height: 46%;
-    /* background-color: var(--color-four); */
     background-color: var(--color-four-transparent);
     border-radius: 30%;
     opacity: 0.9;
     transform-origin: top left;
-    transition: all 5s ease-in-out;
-    filter: blur(0.5px);
-    /* display: none; */
+    transition: all 5s ease-in-out;/**/
+    filter: blur(0.5px); /**/
+    /* display: none; *//**/
 }
 
 .clock__secondsPointer {
