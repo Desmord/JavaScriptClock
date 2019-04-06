@@ -13,9 +13,9 @@
     --color-five: rgba(75, 71, 66, 1);
     /* ---------- */
     position: relative;
-    width: 300px;
+    width: 600px;
     min-width: 100px;
-    height: 300px;
+    height: 600px;
     min-height: 100px;
     background-color: var(--color-one-transparent);
     border-radius: 10%;
@@ -113,6 +113,7 @@
     opacity: 0.9;
     transform-origin: top left;
     transition: all 10s ease-in-out;
+    filter: blur(0.5px);
     /* ----------------- */
     /* display: none; */
 }
@@ -129,6 +130,7 @@
     opacity: 0.9;
     transform-origin: top left;
     transition: all 5s ease-in-out;
+    filter: blur(0.5px);
     /* display: none; */
 }
 
