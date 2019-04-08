@@ -197,7 +197,7 @@ class Clock {
         this.updateMinutes();
         this.updateSeconds();
 
-        // Reseting pointers position in starting times in order to prevent returning animation
+        // Reseting pointers position when pointers are in starting times in order to prevent returning animation
         // Seconds pointer
         if (this.actualSeconds == 0) {
             this.resetSecondsPointerPostion();
@@ -224,7 +224,9 @@ class Clock {
     startAnimation() {
 
         this.animation = setTimeout(() => {
+            // Update animation frame
             window.requestAnimationFrame(this.animationFrame.bind(this));
+            // Start animation frame again
             this.startAnimation();
         }, 1);
 

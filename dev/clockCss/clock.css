@@ -12,13 +12,16 @@
     --color-four-transparent: rgba(114, 108, 99, 0.8);
     --color-five: rgba(75, 71, 66, 1);
     /* ---------- */
+    --clock-size: 200px;
+    /* ---------- */
     position: relative;
-    width: 600px;
-    min-width: 100px;
-    height: 600px;
-    min-height: 100px;
+    width: var(--clock-size);
+    min-width: 600px;
+    height: var(--clock-size);
+    min-height: 600px;
     background-color: var(--color-one-transparent);
     border-radius: 10%;
+    font-family: serif;
 }
 
 .clockLine {
@@ -112,7 +115,7 @@
     border-radius: 40%;
     opacity: 0.9;
     transform-origin: top left;
-    transition: all 10s ease-in-out;
+    transition: all 5s ease-in-out;
     filter: blur(0.5px);
     /* ----------------- */
     display: none;
@@ -128,8 +131,10 @@
     border-radius: 30%;
     opacity: 0.9;
     transform-origin: top left;
-    transition: all 5s ease-in-out;/**/
-    filter: blur(0.5px); /**/
+    transition: all 2s ease-in-out;
+    /**/
+    filter: blur(0.5px);
+    /**/
     display: none;
 }
 
@@ -145,4 +150,46 @@
     transform-origin: top left;
     transition: all 1s linear;
     display: none;
+}
+
+/*  -------------------------------------------------------------  */
+
+/*  -------------------------------------------------------------  */
+
+/*  -------------------------------------------------------------  */
+
+/*  -------------------------------------------------------------  */
+
+/*  Clock Numbers */
+
+.clockNumber {
+    position: absolute;
+    font-size: calc(var(--clock-size) * 0.1);
+    color: var(--color-four);
+    width: 14%;
+    height: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.clock__twelfthHour {
+    left: 43%;
+    top: 1%;
+}
+
+.clock__thirdHour {
+    left: 85%;
+    top: 43%;
+}
+
+.clock__sixHour {
+    left: 43%;
+    top: 85%;
+}
+
+.clock__ninthHour {
+    left: 1%;
+    top: 43%;
 }
