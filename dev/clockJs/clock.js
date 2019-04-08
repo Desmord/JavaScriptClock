@@ -17,6 +17,30 @@ class Clock {
 
     }
 
+    resetSecondsPointerPostion() {
+
+        this.secondsPointer.style.transition = `none`;
+        this.updateSecondPointerPosition();
+        this.secondsPointer.style.transition = `all 1s linear`;
+
+    }
+
+    resetMinutePointerPostion() {
+
+        this.minutePointer.style.transition = `none`;
+        this.updateMinutePointerPosition();
+        this.minutePointer.style.transition = `all 1s linear`;
+
+    }
+
+    resetHourPointerPostion() {
+
+        this.hourPointer.style.transition = `none`;
+        this.updateHourPointerPosition();
+        this.hourPointer.style.transition = `all 1s linear`;
+
+    }
+
     updateClockWidth() {
         this.clockWidth = this.clock.clientWidth;
     }
@@ -172,6 +196,20 @@ class Clock {
         this.updateHour();
         this.updateMinutes();
         this.updateSeconds();
+
+        // Reseting pointers position in starting times in order to prevent returning animation
+        // Seconds pointer
+        if (this.actualSeconds == 0) {
+            this.resetSecondsPointerPostion();
+        }
+        // Minutes
+        if (this.actualMinutes == 0) {
+            this.resetMinutePointerPostion();
+        }
+        // Hours
+        if (this.actualHour == 24 || this.actualHour == 12 || this.actualHour == 0) {
+            this.resetHourPointerPostion();
+        }
 
         // Updating pointers position
         this.updateHourPointerPosition();
