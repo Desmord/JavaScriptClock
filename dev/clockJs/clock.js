@@ -139,6 +139,29 @@ class Clock {
 
     }
 
+
+    /**
+     * Setting proper pointers start position
+     */
+    setStartPosition() {
+
+        this.updateTime();
+        this.updateHour();
+        this.updateMinutes();
+        this.updateSeconds();
+
+        this.updateHourPointerPosition();
+        this.hourPointer.style.display = `block`;
+
+        this.updateMinutePointerPosition();
+        this.minutePointer.style.display = `block`;
+
+        this.updateSecondPointerPosition();
+        this.secondsPointer.style.display = `block`;
+
+    }
+
+
     /**
      * Updating time values then updates pointers positions
      */
@@ -173,8 +196,12 @@ class Clock {
      * Stops clock animation
      */
     stopAnimation() {
+
         clearTimeout(this.animation);
+
     }
+
+
 
 }
 

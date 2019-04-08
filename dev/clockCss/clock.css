@@ -115,7 +115,7 @@
     transition: all 10s ease-in-out;
     filter: blur(0.5px);
     /* ----------------- */
-    /* display: none; */
+    display: none;
 }
 
 .clock__minutePointer {
@@ -130,7 +130,7 @@
     transform-origin: top left;
     transition: all 5s ease-in-out;/**/
     filter: blur(0.5px); /**/
-    /* display: none; *//**/
+    display: none;
 }
 
 .clock__secondsPointer {
@@ -144,5 +144,5 @@
     opacity: 0.8;
     transform-origin: top left;
     transition: all 1s linear;
-    /* display: none; */
+    display: none;
 }

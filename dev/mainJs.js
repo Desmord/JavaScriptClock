@@ -5,4 +5,5 @@ const Clock = require(`./clockJs/clock`);
 
 const clock = new Clock.Clock(document.querySelector(`.clock`));
 
+clock.setStartPosition();
 clock.startAnimation();
